@@ -48,6 +48,7 @@ function setup() {
   for (let i = 0; i < 30; i++) {
     balls.push(new Ball());
   }
+}
 
 //   button = createButton('click me');
 //   button.position(0, 0);
@@ -86,9 +87,8 @@ function checkForShake() {
       balls[i].shake();
       balls[i].turn();
     }
-  }
   // If not shake
-  else {
+ } else {
     for (let i = 0; i < balls.length; i++) {
       balls[i].stopShake();
       balls[i].turn();
@@ -161,7 +161,7 @@ class Ball {
    strokeWeight(0.25)
    stroke(255, 0, 255);
     circle(this.x, this.y, this.diameter, this.diameter);
-   
+   console.log('Shape Generated')
     
   }
 }
@@ -176,4 +176,4 @@ class Ball {
 //   let val = circle(this.x, this.y, this.diameter, this.diameter);;
 //   background(val);
 // }
-}
+
